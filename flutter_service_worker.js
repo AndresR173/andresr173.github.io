@@ -4,9 +4,9 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "e6d29bd6086290b6f3704081b1c227b9",
-"index.html": "d0b5cef5aec2263878409e7972bd9d39",
-"/": "d0b5cef5aec2263878409e7972bd9d39",
-"main.dart.js": "f24884fe1df92cde9d2c080dfd9ff83b",
+"index.html": "612b72934d6366853c4509e26bef4df6",
+"/": "612b72934d6366853c4509e26bef4df6",
+"main.dart.js": "db7c3950d00d11ff168f7ed20e56c522",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
@@ -14,7 +14,7 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "1b7a3bef4db86de68c79693ef46d227f",
 "assets/AssetManifest.json": "6de268c58bf731f70dd2faf6f0cacb87",
-"assets/NOTICES": "e971f7fb374b4284cdb0d270dc7e8825",
+"assets/NOTICES": "e018908fcc05850558449e02bb53155d",
 "assets/FontManifest.json": "1e1d150d00a27a2c56a7d3663d498110",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/country_code_picker/flags/tg.png": "82dabd3a1a4900ae4866a4da65f373e5",
@@ -395,10 +395,10 @@ const RESOURCES = {
 "assets/assets/fonts/Montserrat-Light.ttf": "409c7f79a42e56c785f50ed37535f0be",
 "assets/assets/fonts/Montserrat-Bold.ttf": "ade91f473255991f410f61857696434b",
 "assets/assets/fonts/Montserrat-Regular.ttf": "ee6539921d713482b8ccd4d0d23961bb",
-"canvaskit/canvaskit.js": "43fa9e17039a625450b6aba93baf521e",
-"canvaskit/profiling/canvaskit.js": "f3bfccc993a1e0bfdd3440af60d99df4",
-"canvaskit/profiling/canvaskit.wasm": "a9610cf39260f60fbe7524a785c66101",
-"canvaskit/canvaskit.wasm": "04ed3c745ff1dee16504be01f9623498"
+"canvaskit/canvaskit.js": "62b9906717d7215a6ff4cc24efbd1b5c",
+"canvaskit/profiling/canvaskit.js": "3783918f48ef691e230156c251169480",
+"canvaskit/profiling/canvaskit.wasm": "6d1b0fc1ec88c3110db88caa3393c580",
+"canvaskit/canvaskit.wasm": "b179ba02b7a9f61ebc108f82c5a1ecdb"
 };
 
 // The application shell files that are downloaded before a service worker can
