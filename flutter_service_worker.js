@@ -3,17 +3,17 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "version.json": "f650b8c3b2f035a132e97367383e6b0f",
-"index.html": "05c8aea2e725a0025d6568cf71d5420d",
-"/": "05c8aea2e725a0025d6568cf71d5420d",
+  "version.json": "bfd7cd91dfcd7290f049a781633e6b80",
+"index.html": "c80f64af962299009f8b42512cc77b9c",
+"/": "c80f64af962299009f8b42512cc77b9c",
 "firebase-messaging-sw.js": "42562a71f4102fad2e77d95fa6bb8e6b",
-"main.dart.js": "5a605ea62a5158731f4993a0b13e32f9",
+"main.dart.js": "0f010a250eae057120b31a35d9a9f2a1",
 "favicon.png": "6de82f9e1dcff1ba17b281a3f8b3d0f3",
 "icons/Icon-192.png": "da05e651004d55554b7d7322f284b0ba",
 "icons/Icon-512.png": "0431065458270782656c22e3b5a1911d",
 "manifest.json": "5902bba520e51d8959fb07c0faa5d9bc",
-"assets/AssetManifest.json": "788e15b97e8cdc8259e7b2c418d1d87b",
-"assets/NOTICES": "be6bce8520ee3a472d3d60255c9e3edd",
+"assets/AssetManifest.json": "0e720e61592d422a770a29ec41c2f79c",
+"assets/NOTICES": "b57d61306a13ef594567000ceb3c7899",
 "assets/FontManifest.json": "c9b165b9da5d910d3887477dceb5b184",
 "assets/packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_AMS-Regular.ttf": "657a5353a553777e270827bd1630e467",
 "assets/packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Script-Regular.ttf": "55d2dcd4778875a53ff09320a85a5296",
@@ -379,9 +379,10 @@ const RESOURCES = {
 "assets/packages/fluttertoast/assets/toastify.js": "e7006a0a033d834ef9414d48db3be6fc",
 "assets/packages/fluttertoast/assets/toastify.css": "a85675050054f179444bc5ad70ffc635",
 "assets/packages/wakelock_web/assets/no_sleep.js": "7748a45cd593f33280669b29c2c8919a",
-"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
+"assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
 "assets/assets/images/ic_phone.svg": "fa25b106fac95b55a0488e53e3d945fa",
 "assets/assets/images/ic_points.svg": "0dadb83a245106c4602ccb7d91fb64a2",
+"assets/assets/images/travel_banner.png": "5275700f6c3389a6009e98cf2aeef954",
 "assets/assets/images/ic_share.svg": "06046186d2acaba886a9e4d9dec6379e",
 "assets/assets/images/tc-android/app4.png": "6ba5ff0f9faf3b515407ece267f0343f",
 "assets/assets/images/tc-android/app2.png": "cea40359d0da57f9cde0d22ff88a76bb",
@@ -443,6 +444,7 @@ const RESOURCES = {
 "assets/assets/images/ic_help_button.svg": "232a93fe348f047b1a40fe8e2359f221",
 "assets/assets/images/ic_gallery.svg": "585434b2fe249c008b0545da22cb5714",
 "assets/assets/images/privileges/ic_hotels.svg": "0f6459736837bba5e6f0d06e64b8319b",
+"assets/assets/images/privileges/ic_travel.svg": "79497667c374f2af65d440cf06028787",
 "assets/assets/images/privileges/ic_assistances.svg": "abae80293394d09c370036f8edb384cb",
 "assets/assets/images/privileges/ic_flights.svg": "fe89b4307c5e230d930a864f5f00bccd",
 "assets/assets/images/privileges/ic_atc.svg": "956f085cd3b50af240b6b7bbd6fba2d6",
@@ -463,6 +465,7 @@ const RESOURCES = {
 "assets/assets/images/ic_terms_of_use.svg": "14c82ee20f0c53e223794697d9345332",
 "assets/assets/images/background_atc.png": "90fdfc3c80e1b5c5860c158e757835f0",
 "assets/assets/images/ic_radio_active.svg": "4c6497cc1696127a55511f15f2f071e4",
+"assets/assets/images/background_travel.png": "e62f22e973995c48be296e825c8ab63f",
 "assets/assets/images/ic_copy.svg": "75b04ea2e5138128f454fb1b8c2fa786",
 "assets/assets/images/ic_agents.svg": "305a8028a1d4280e3e8d1633f48fc2e0",
 "assets/assets/images/tc-ios/app4.png": "4001cb3ca4735f24baf6cdb8a72ca7ad",
@@ -493,10 +496,10 @@ const RESOURCES = {
 "assets/assets/fonts/Poppins-Italic.ttf": "5e956c44060a7b3c0e39819ae390ab15",
 "assets/assets/animations/hotels.json": "6fe2c0367b272cb5607b6a9209263df8",
 "assets/assets/animations/flights.json": "1fafcc691c635cc328d04679a634f472",
-"canvaskit/canvaskit.js": "62b9906717d7215a6ff4cc24efbd1b5c",
-"canvaskit/profiling/canvaskit.js": "3783918f48ef691e230156c251169480",
-"canvaskit/profiling/canvaskit.wasm": "6d1b0fc1ec88c3110db88caa3393c580",
-"canvaskit/canvaskit.wasm": "b179ba02b7a9f61ebc108f82c5a1ecdb"
+"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
+"canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
+"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
+"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba"
 };
 
 // The application shell files that are downloaded before a service worker can
