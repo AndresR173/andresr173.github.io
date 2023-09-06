@@ -2,126 +2,118 @@
 <html>
 
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    Fore more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-  -->
   <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Programa de beneficios">
+  <meta name="description" content="ORS web console.">
+  <meta property="og:title" content="ORS web console." />
+  <meta property="og:type" content="website" />
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Tu Ciudad en Red">
+  <meta name="apple-mobile-web-app-title" content="console_log">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <meta property="og:title" content="Tu Ciudad en Red" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tuciudadenred.com" />
-  <meta property="og:image" content="https://andresr173.github.io/icons/Icon-192.png" />
-
-  <title>Tu Ciudad en Red</title>
+  <title>ORS Web Console</title>
   <link rel="manifest" href="manifest.json">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJzfO0wFqOnu9R9CMZ2_lqjjkYsWv97JE"></script>
+
+  <script>
+    let searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.has('renderer')) {
+      window.flutterWebRenderer = searchParams.get('renderer');
+      console.log(searchParams.get('renderer') + ' renderer requested in the URL');
+    }
+
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "2974298046";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
 </head>
 
 <body>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
-  <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyAlPm0TIpcpV_WSWaQxMegZUJBdmQ6XMiQ",
-      authDomain: "tu-ciudad-en-red.firebaseapp.com",
-      databaseURL: "https://tu-ciudad-en-red.firebaseio.com",
-      projectId: "tu-ciudad-en-red",
-      storageBucket: "tu-ciudad-en-red.appspot.com",
-      messagingSenderId: "20495679942",
-      appId: "1:20495679942:web:763208cd02aa112b6b72c7",
-      measurementId: "G-9S0B8T52E3"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  // firebase.analytics();
-  </script>
-
-  <script>
-    var serviceWorkerVersion = '1246648119';
-    var scriptLoaded = false;
-    function loadMainDartJs() {
-      if (scriptLoaded) {
-        return;
+  <div id="loading">
+    <style>
+      body {
+        inset: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        position: fixed;
       }
-      scriptLoaded = true;
-      var scriptTag = document.createElement('script');
-      scriptTag.src = 'main.dart.js';
-      scriptTag.type = 'application/javascript';
-      document.body.append(scriptTag);
-    }
 
-    if ('serviceWorker' in navigator) {
-      // Service workers are supported. Use them.
-      window.addEventListener('load', function () {
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
-        navigator.serviceWorker.register(serviceWorkerUrl)
-          .then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener('statechange', () => {
-                if (serviceWorker.state == 'activated') {
-                  console.log('Installed new service worker.');
-                  loadMainDartJs();
-                }
-              });
-            }
-            if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
-              waitForActivation(reg.installing || reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
-              console.log('New service worker available.');
-              reg.update();
-              waitForActivation(reg.installing);
-            } else {
-              // Existing service worker is still good.
-              console.log('Loading app from service worker.');
-              loadMainDartJs();
-            }
-          });
+      #loading {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: 100%;
+      }
 
-        // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
-        setTimeout(() => {
-          if (!scriptLoaded) {
-            console.warn(
-              'Failed to load app from service worker. Falling back to plain <script> tag.',
-            );
-            loadMainDartJs();
-          }
-        }, 4000);
+      #loading img {
+        animation: 1s ease-in-out 0s infinite alternate breathe;
+        opacity: .66;
+        transition: opacity .4s;
+      }
+
+      #loading.main_done img {
+        opacity: 1;
+      }
+
+      #loading.init_done img {
+        animation: .33s ease-in-out 0s 1 forwards zooooom;
+        opacity: .05;
+      }
+
+      @keyframes breathe {
+        from {
+          transform: scale(1)
+        }
+
+        to {
+          transform: scale(0.95)
+        }
+      }
+
+      @keyframes zooooom {
+        from {
+          transform: scale(1)
+        }
+
+        to {
+          transform: scale(10)
+        }
+      }
+    </style>
+    <img src="icons/ors-short.png" alt="Loading indicator..." />
+  </div>
+
+
+  <script>
+    window.addEventListener('load', function () {
+      var loading = document.querySelector('#loading');
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        }
+      }).then(function (engineInitializer) {
+        loading.classList.add('main_done');
+        return engineInitializer.initializeEngine();
+      }).then(function (appRunner) {
+        loading.classList.add('init_done');
+        return appRunner.runApp();
+      }).then(function (app) {
+        window.setTimeout(function () {
+          loading.remove();
+        }, 200);
       });
-    } else {
-      // Service workers not supported. Just drop the <script> tag.
-      loadMainDartJs();
-    }
+    });
   </script>
-  <script src="main.dart.js" type="application/javascript"></script>
 </body>
 
 </html>

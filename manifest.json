@@ -1,6 +1,6 @@
 {
-    "name": "tuciudadenred",
-    "short_name": "tuciudadenred",
+    "name": "console_log",
+    "short_name": "console_log",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
