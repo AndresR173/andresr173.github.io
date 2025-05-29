@@ -1,119 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <base href="/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="ORS web console.">
-  <meta property="og:title" content="ORS web console." />
+  <title>The Angles</title>
+  <meta charset="utf-8" />
+  <!-- Open Graph metadata for social sharing -->
+  <meta property="og:title" content="The Angles" />
+  <meta property="og:description" content="Discover The Angles app." />
+  <meta property="og:image" content="https://static.wixstatic.com/media/f03582_4bd0f443c4cf48b5bc2fbc80dc53479f~mv2.png/v1/fill/w_484,h_432,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Selected%20Logo.png" />
+  <meta property="og:image:alt" content="The Angles Logo" />
   <meta property="og:type" content="website" />
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="console_log">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-
-  <title>ORS Web Console</title>
-  <link rel="manifest" href="manifest.json">
-
+  <meta property="og:url" content="https://www.theangles.io/" />
+  <!-- Twitter Card metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Angles" />
+  <meta name="twitter:description" content="Discover The Angles app." />
+  <meta name="twitter:image" content="https://static.wixstatic.com/media/f03582_4bd0f443c4cf48b5bc2fbc80dc53479f~mv2.png/v1/fill/w_484,h_432,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Selected%20Logo.png" />
+  <meta name="twitter:image:alt" content="The Angles Logo" />
   <script>
-    let searchParams = new URLSearchParams(window.location.search);
-    if (searchParams.has('renderer')) {
-      window.flutterWebRenderer = searchParams.get('renderer');
-      console.log(searchParams.get('renderer') + ' renderer requested in the URL');
+    if (/iPad|iPhone|iPod/.test(navigator.platform)) {
+      window.location = "https://apps.apple.com/us/app/the-angles/id6742912848";
+    } else if (navigator.userAgent.match(/android/i)) {
+      window.location = "https://play.google.com/store/apps/details?id=com.theangles.theangles&hl=en";
+    } else {
+      window.location = "https://www.theangles.io/";
     }
-
-    // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "2974298046";
   </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
 </head>
 
 <body>
-  <div id="loading">
-    <style>
-      body {
-        inset: 0;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-        position: fixed;
-      }
-
-      #loading {
-        align-items: center;
-        display: flex;
-        height: 100%;
-        justify-content: center;
-        width: 100%;
-      }
-
-      #loading img {
-        animation: 1s ease-in-out 0s infinite alternate breathe;
-        opacity: .66;
-        transition: opacity .4s;
-      }
-
-      #loading.main_done img {
-        opacity: 1;
-      }
-
-      #loading.init_done img {
-        animation: .33s ease-in-out 0s 1 forwards zooooom;
-        opacity: .05;
-      }
-
-      @keyframes breathe {
-        from {
-          transform: scale(1)
-        }
-
-        to {
-          transform: scale(0.95)
-        }
-      }
-
-      @keyframes zooooom {
-        from {
-          transform: scale(1)
-        }
-
-        to {
-          transform: scale(10)
-        }
-      }
-    </style>
-    <img src="icons/ors-short.png" alt="Loading indicator..." />
-  </div>
-
-
-  <script>
-    window.addEventListener('load', function () {
-      var loading = document.querySelector('#loading');
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        }
-      }).then(function (engineInitializer) {
-        loading.classList.add('main_done');
-        return engineInitializer.initializeEngine();
-      }).then(function (appRunner) {
-        loading.classList.add('init_done');
-        return appRunner.runApp();
-      }).then(function (app) {
-        window.setTimeout(function () {
-          loading.remove();
-        }, 200);
-      });
-    });
-  </script>
 </body>
 
 </html>
